@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(135deg, #0066cc, #0099cc);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.navegacao {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navegacao .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+}
+
+.navegacao a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.navegacao a:hover {
+    background: #e6f2ff;
+}
+
+.seccao {
+    background: white;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.seccao h2 {
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e6f2ff;
+}
+
+.opcoes-acesso {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cartao {
+    background: #f0f8ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #0099cc;
+}
+
+.cartao h3 {
+    color: #0066cc;
+    margin-bottom: 0.8rem;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario label {
+    display: block;
+    margin: 1rem 0 0.3rem;
+    font-weight: 500;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-principal, .btn-secundario {
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1.5rem;
+}
+
+.btn-principal {
+    background: #009933;
+    color: white;
+    width: 100%;
+}
+
+.btn-principal:hover {
+    background: #007a29;
+}
+
+.btn-secundario {
+    background: #0066cc;
+    color: white;
+}
+
+.btn-secundario:hover {
+    background: #0052a3;
+}
+
+.mensagem, .resultado-consulta {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.sucesso {
+    background: #e6ffe6;
+    border: 1px solid #009933;
+    color: #006600;
+    display: block !important;
+}
+
+.erro {
+    background: #ffe6e6;
+    border: 1px solid #cc0000;
+    color: #990000;
+    display: block !important;
+}
+
+.consulta-busca {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.consulta-busca input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.resultado-consulta {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .seccao {
+        padding: 1.2rem;
+    }
+}

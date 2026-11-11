@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Fácil MZ — Marcação de Consultas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🏥 Saúde Fácil MZ</h1>
+            <p>Sistema Nacional de Marcação de Consultas</p>
+        </div>
+    </header>
+
+    <nav class="navegacao">
+        <div class="container">
+            <a href="#inicio">Início</a>
+            <a href="#marcar">Marcar Consulta</a>
+            <a href="#consultas">Minhas Consultas</a>
+            <a href="#sobre">Sobre</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="inicio" class="seccao">
+            <h2>Bem-vindo ao Saúde Fácil MZ</h2>
+            <p>A forma mais simples de marcar a sua consulta de saúde em qualquer província de Moçambique.</p>
+            
+            <div class="opcoes-acesso">
+                <div class="cartao">
+                    <h3>📲 Por Telemóvel</h3>
+                    <p>Disque <strong>*880#</strong> — funciona em qualquer telemóvel, sem precisar de internet</p>
+                </div>
+                <div class="cartao">
+                    <h3>🌐 Pela Internet</h3>
+                    <p>Use este site para pesquisar vagas e marcar a sua consulta online</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marcar" class="seccao">
+            <h2>📅 Marcar Consulta</h2>
+            
+            <form id="form-marcação" class="formulario">
+                <label for="provincia">Província:</label>
+                <select id="provincia" required>
+                    <option value="">Selecione a província</option>
+                    <option value="maputo">Maputo</option>
+                    <option value="gaza">Gaza</option>
+                    <option value="inhambane">Inhambane</option>
+                    <option value="sofala">Sofala</option>
+                    <option value="manica">Manica</option>
+                    <option value="tete">Tete</option>
+                    <option value="zambézia">Zambézia</option>
+                    <option value="nampula">Nampula</option>
+                    <option value="cabo-delgado">Cabo Delgado</option>
+                    <option value="niassa">Niassa</option>
+                    <option value="cidade-maputo">Cidade de Maputo</option>
+                </select>
+
+                <label for="unidade">Unidade Sanitária:</label>
+                <select id="unidade" required>
+                    <option value="">Selecione primeiro a província</option>
+                </select>
+
+                <label for="especialidade">Especialidade:</label>
+                <select id="especialidade" required>
+                    <option value="">Selecione a especialidade</option>
+                    <option value="medicina-geral">Medicina Geral</option>
+                    <option value="pediatria">Pediatria</option>
+                    <option value="obstetricia">Obstetrícia</option>
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="oftalmologia">Oftalmologia</option>
+                    <option value="dentaria">Saúde Oral</option>
+                </select>
+
+                <label for="data">Data da Consulta:</label>
+                <input type="date" id="data" required>
+
+                <label for="nome">Seu Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+                <label for="telefone">Seu Telemóvel:</label>
+                <input type="tel" id="telefone" placeholder="Ex: +258 84 000 0000" required>
+
+                <button type="submit" class="btn-principal">✅ Confirmar Marcação</button>
+            </form>
+
+            <div id="mensagem-resultado" class="mensagem"></div>
+        </section>
+
+        <section id="consultas" class="seccao">
+            <h2>🔍 Minhas Consultas</h2>
+            <p>Digite o seu código de confirmação para ver ou cancelar a sua consulta.</p>
+            
+            <div class="consulta-busca">
+                <input type="text" id="codigo-consulta" placeholder="Digite seu código (ex: MZ1234)">
+                <button type="button" onclick="verConsulta()" class="btn-secundario">Ver Consulta</button>
+            </div>
+            
+            <div id="resultado-consulta" class="resultado-consulta"></div>
+        </section>
+
+        <section id="sobre" class="seccao">
+            <h2>ℹ️ Sobre o Projeto</h2>
+            <p>O <strong>Saúde Fácil MZ</strong> é uma plataforma nacional que visa facilitar o acesso aos serviços de saúde em todo o território moçambicano.</p>
+            <p><strong>Canais de acesso:</strong></p>
+            <ul>
+                <li>📲 USSD: Disque *880# — sem internet</li>
+                <li>🌐 Este site — marcação online</li>
+                <li>📩 Em breve: WhatsApp e SMS</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Saúde Fácil MZ — Todos os direitos reservados | Moçambique 🇲🇿</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
